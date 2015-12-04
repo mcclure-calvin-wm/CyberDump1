@@ -386,11 +386,25 @@ ul img {
   height: 160px;
 }
 
+#three {
+  width: 160px;
+  height: 160px;
+}
+
+#four {
+  width: 160px;
+  height: 160px;
+}
+
+#five {
+  width: 160px;
+  height: 160px;
+}
+
 #selection {
   margin-top: 30px;
   margin-left: 80px;
   text-align: center;
-  align: center;
 }
 
 td {
