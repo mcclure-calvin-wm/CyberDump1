@@ -90,9 +90,9 @@ ol li
 
 header
 { background-color: #ffffff;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;}
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;}
 
 #banner
 { width: auto;
@@ -118,9 +118,9 @@ nav
     background: -moz-linear-gradient(#e9ffe2, #e9ffe2);
     background: -o-linear-gradient(#e9ffe2, #e9ffe2);
     background: -webkit-linear-gradient(#e9ffe2, #cde2c7);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
 }
 
 #welcome
