@@ -411,3 +411,11 @@ ul img {
 td {
     padding: 10px;
 }
+a{
+    color: #0043A8;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
