@@ -30,7 +30,7 @@ p
 img
 { border: 0;}
 
-h1, h2, h3, h4, h5, h6
+h1, h4, h5, h6
 { font: bold 175% 'News Cycle', Arial, sans-serif;
     color: #fff;
     text-shadow: 1px 1px #000;
@@ -421,6 +421,20 @@ ul {
 }
 #productItems {
     text-align: center;
+}
 
+h2 { font: bold 175% 'News Cycle', Arial, sans-serif;
+    color: #8fa28b;
+    text-shadow: 1px 1px #000;
+    letter-spacing: -1px;
+    margin: 0 0 10px 0;
+    font-size: 40px;
+}
 
+h3 {
+    font: bold 120% 'News Cycle', Arial, sans-serif;
+    color: #000000;
+    letter-spacing: -1px;
+    margin: 0 0 10px 0;
+    font-size: 17px;
 }
