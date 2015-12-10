@@ -4,9 +4,10 @@
 
 
 (function(){
+    var iSS = document.getElementById("itemFinding");
     var fN = document.getElementById("firstNameSection");
     var lN = document.getElementById("lastNameSection");
     var pS = document.getElementById("passwordSection");
     var eS = document.getElementById("emailSection");
-    
+
 })();
