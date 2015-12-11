@@ -420,6 +420,7 @@ ul {
 }
 #productItems {
     text-align: center;
+    margin-left: 70px;
 }
 
 h2 { font: bold 175% 'News Cycle', Arial, sans-serif;
