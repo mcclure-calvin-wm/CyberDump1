@@ -412,4 +412,20 @@ h5 {
     text-align: center;
 
 }
+ul#nav li.current a, ul#nav li:hover a {
+    color: #aaafac;
+}
+ul#nav li a
+{ float: left;
+    font: bold 120% Arial, Helvetica, sans-serif;
+    height: 24px;
+    margin: 10px 0 0 150px;
+    padding: 6px 20px 0 20px;
+    background: transparent;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border: 7px 7px 7px 7px;
+    text-align: center;
+    color: #757A77;
+    text-decoration: none;}
 
