@@ -25,11 +25,11 @@
 
 	  <div id="menubar">
         <ul id="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Form.html">Form</a></li>
-          <li><a href="Products.html">Products</a></li>
-          <li><a href="Help.html">Help</a></li>
-          <li class="current"><a href="SignIn.html">Sign in</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="Form.php">Form</a></li>
+          <li><a href="Products.php">Products</a></li>
+          <li><a href="Help.php">Help</a></li>
+          <li class="current"><a href="SignIn.php">Sign in</a></li>
         </ul>
       </div><!--close menubar-->	
 	</nav>
@@ -45,7 +45,7 @@
     <button>Sign in</button>
     <div id="signs">
 
-        <a href="createAccount.html" style="color: #0043A8;">Don't have account?</a>
+        <a href="createAccount.php" style="color: #0043A8;">Don't have account?</a>
 
     </div>
 </div>
