@@ -1,3 +1,9 @@
+<?php
+
+    ?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -37,12 +43,13 @@
 
 <div id="Signup" >
   <h5 style="">sign in</h5>
+    <br>
  <p>Email</p>
   <input type="text">
   <p>Password</p>
   <input type="password">
     <br>
-    <button>Sign in</button>
+    <button >Sign in</button>
     <div id="signs">
 
         <a href="createAccount.php" style="color: #0043A8;">Don't have account?</a>
