@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php
 
-    ?>
-=======
 
 <?php
 
@@ -26,11 +22,6 @@ catch(PDOException $e) {
 
 
 ?>
-
->>>>>>> ddf971fb4675acc0a91117f6f2efe09e200234d0
-
-
-
 <!DOCTYPE html>
 <html>
 
