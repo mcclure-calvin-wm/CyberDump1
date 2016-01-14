@@ -24,11 +24,11 @@
 	<nav>
 	  <div id="menubar">
         <ul id="nav">
-          <li><a href="index.html">Home</a></li>
-          <li class="current"><a href="Form.html">Form</a></li>
-          <li><a href="Products.html">Products</a></li>
-          <li><a href="Help.html">Help</a></li>
-          <li><a href="SignIn.html">Sign in</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li class="current"><a href="Form.php">Form</a></li>
+          <li><a href="Products.php">Products</a></li>
+          <li><a href="Help.php">Help</a></li>
+          <li><a href="SignIn.php">Sign in</a></li>
         </ul>
       </div><!--close menubar-->
 	</nav>
@@ -162,7 +162,7 @@
 	</div><!--close site_content-->
 
     <footer>
-	  <a href="index.html">Home</a> | <a href="ourwork.html">Our Work</a> | <a href="testimonials.html">Testimonials</a> | <a href="projects.html">Projects</a> | <a href="contact.html">Contact</a><br/><br/>
+	  <a href="index.php">Home</a> | <a href="ourwork.html">Our Work</a> | <a href="testimonials.html">Testimonials</a> | <a href="projects.html">Projects</a> | <a href="contact.html">Contact</a><br/><br/>
 	  <a href="http://fotogrph.com">Images</a> |  <a href="http://www.heartinternet.co.uk/web-hosting/">Web Hosting</a>  | website template by <a>us</a>
     </footer> 	
   
