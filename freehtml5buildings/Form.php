@@ -1,4 +1,89 @@
-<!DOCTYPE html> 
+
+
+
+<?php
+
+$servername = "localhost";
+
+$username = "root";
+
+$password = "root";
+
+try {
+    $dbh = new PDO("mysql:host=$servername;dbname=form", $username, $password);
+    /*** echo a message saying we have connected ***/
+    $sql = "SELECT * FROM postmade";
+    foreach ($dbh->query($sql) as $row){
+        print $row['idusers'] .' - '. $row['firstname'] . '<br />';
+    }
+    /*** close the database connection ***/
+}
+catch(PDOException $e) {
+    echo $e->getMessage();
+}
+
+session_start();
+if(isset($_SESSION['userName'])!="") {
+    header("Location: index.php");
+}
+if(isset($_POST['signup'])){
+
+    print_R($_POST);
+
+    $itemname = $_POST['itemFinding'];
+
+    $itemDescription = $_POST['itemDescription'];
+
+    $username = $_POST['username'];
+
+    $password = $_POST['pass'];
+
+    $email = $_POST['email'];
+
+    $first = $_POST['first'];
+
+    $last = $_POST['last'];
+
+
+
+
+    if(isset($username)){
+        //$mysql_get_users = mysql_query("SELECT * FROM users where username='$username'");
+
+        $prepData = array(
+            "first"=>$first,
+            "last"=>$last,
+            "password"=>$password,
+            "email"=>$email,
+            "username"=>$username
+        );
+
+        print_R($prepData);
+        $stmt = $dbh->prepare("INSERT INTO users(firstname,lastname, password, email, username) VALUES(
+              :first,
+              :last,
+              :password,
+              :email,
+              :username)");
+        $result = $stmt->execute($prepData);
+
+        if($result){
+
+            $_SESSION['registered'] = 1;
+            echo "Registered.";
+            header("Location: index.php");
+        }else {
+            var_dump($result);
+
+            echo "Error creating account.";
+        }
+    }
+}
+
+?>
+
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -35,13 +120,13 @@
 
 	<div id="site_content">
       <div>
-          <table id="myTableForm" style="margin: auto"><!--Remember the id -->
+          <form id="myTableForm" style="margin: auto"><!--Remember the id -->
               <tr>
                   <td>
                       <h3>
                           Item Name
                       </h3>
-                      <input id="itemFinding" type="text">
+                      <input name="itemFinding" id="itemFinding" type="text">
                   </td>
               </tr>
               <tr>
@@ -49,7 +134,7 @@
                       <h3>
                           Item Description
                       </h3>
-                      <input id="itemDescription" type="text" style="height: 70px; width: 100%"/>
+                      <input name="itemDescription" id="itemDescription" type="text" style="height: 70px; width: 100%"/>
                   </td>
               </tr>
             <tr>
@@ -64,13 +149,13 @@
                   <td>
                       <p>                                                                                                                   </p>
                       <h3>First Name</h3>
-                      <input type="text" id="firstNameSection"> <!--Remember the id -->
+                      <input name="firstNameSection" type="text" id="firstNameSection"> <!--Remember the id -->
                       <h3>Last Name</h3>
-                      <input type="text" id="laftNameSection"><!--Remember the id -->
+                      <input name="lastNameSection" type="text" id="lastNameSection"><!--Remember the id -->
                       <h3> Password</h3>
-                      <input type="password" id="passwordSection"><!--Remember the id -->
+                      <input name="passwordSection" type="password" id="passwordSection"><!--Remember the id -->
                       <h3> Email</h3>
-                      <input type="email" id="emailSection"><!--Remember the id -->
+                      <input name="emailSection" type="email" id="emailSection"><!--Remember the id -->
                       <p>                                                                                                                   </p>
                   </td>
               </tr>
@@ -90,7 +175,7 @@
                                 <option value="MasterCard">Master Card</option>
                             </select>
                       <h3>Credit Card Number</h3>
-                      <input type="text" id="cardNumberSection"><!--Remember the id -->
+                      <input name="cardNumberSection" type="text" id="cardNumberSection"><!--Remember the id -->
                       <h3>State</h3>
                       <select name="state">
                           <option value="AL">AL</option>
@@ -146,7 +231,7 @@
                           <option value="WY">WY</option>
                       </select>
                       <h3>Address</h3>
-                      <input type="text" id="addressSection"><!--Remember the id -->
+                      <input name="addressSection" type="text" id="addressSection"><!--Remember the id -->
                       <p>                                                                                                                   </p>
                   </td>
               </tr>
@@ -157,12 +242,12 @@
                       </button>
                   </td>
               </tr>
-          </table>
+          </form>
       </div>
 	</div><!--close site_content-->
 
     <footer>
-	  <a href="index.php">Home</a> | <a href="ourwork.html">Our Work</a> | <a href="testimonials.html">Testimonials</a> | <a href="projects.html">Projects</a> | <a href="contact.html">Contact</a><br/><br/>
+	  <a href="index.php">Home</a> | <a href="form.php">Our Work</a> | <a href="testimonials.php">Testimonials</a> | <a href="Products.php">Projects</a> | <a href="contact.html">Contact</a><br/><br/>
 	  <a href="http://fotogrph.com">Images</a> |  <a href="http://www.heartinternet.co.uk/web-hosting/">Web Hosting</a>  | website template by <a>us</a>
     </footer> 	
   
