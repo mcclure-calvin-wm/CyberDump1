@@ -60,7 +60,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 <div id="main">
     <header>
         <div id="banner">
