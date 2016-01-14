@@ -1,6 +1,33 @@
+<<<<<<< HEAD
 <?php
 
     ?>
+=======
+
+<?php
+
+$servername = "localhost";
+
+$username = "root";
+
+$password = "root";
+
+try {
+    $dbh = new PDO("mysql:host=$servername;dbname=form", $username, $password);
+    /*** echo a message saying we have connected ***/
+    $sql = "SELECT * FROM postmade";
+    foreach ($dbh->query($sql) as $row){
+        print $row['idusers'] .' - '. $row['firstname'] . '<br />';
+    }
+}
+catch(PDOException $e) {
+    echo $e->getMessage();
+}
+
+
+?>
+
+>>>>>>> ddf971fb4675acc0a91117f6f2efe09e200234d0
 
 
 
