@@ -9,6 +9,34 @@
   <link rel="stylesheet" type="text/css" href="css/signup.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+    <?php
+        function SignIn() {
+            session_start(); //starting the session for user profile page
+
+            if(!empty($_POST['username'])) //checking the 'user' name which is from Sign-In.html, is it empty or have some text
+            {
+                $query = mysql_query("SELECT * FROM cyberdump.username where username = '$_POST[username]' AND password = '$_POST[password]'") or die(mysql_error());
+
+                $row = mysql_fetch_array($query) or die(mysql_error());
+
+                if(!empty($row['username']) AND !empty($row['password']))
+                    {
+                        $_SESSION['username'] = $row['password']; echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
+                    }
+
+                else
+                    {
+                        echo "SORRY... YOU ENTERED WRONG ID AND PASSWORD... PLEASE RETRY...";
+                    }
+            }
+        }
+            if(isset($_POST['Submit']))
+                {
+                    SignIn();
+                }
+        }
+    ?>
 </head>
 
 <body>
